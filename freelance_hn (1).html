@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>freelance.hn | Ideas para negocios Freelance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <script>
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        html.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    }
+  </script>
+</head>
+<body class="text-gray-800 bg-[#f8fafc] dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+
+  <nav class="fixed w-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-gray-700 dark:text-gray-100">freelance.hn</h1>
+      <ul class="hidden sm:flex gap-6 text-gray-600 dark:text-gray-300 font-medium">
+        <li><a href="#inicio" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Inicio</a></li>
+        <li><a href="#categorias" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Categorías</a></li>
+        <li><a href="#diferencias" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Diferencias</a></li>
+        <li><a href="#contacto" class="hover:text-purple-600 dark:hover:text-purple-400 transition">Contacto</a></li>
+      </ul>
+      <button onclick="toggleTheme()" class="ml-4 text-xl" title="Cambiar modo">
+        <span id="theme-icon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <section id="inicio" class="pt-28 text-center max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl sm:text-4xl font-semibold text-gray-700 dark:text-gray-100">Descubre ideas de negocios freelance</h2>
+    <p class="mt-3 text-gray-500 dark:text-gray-400">Explora oportunidades para trabajar desde donde quieras. Aprende sobre distintos tipos de negocios y encuentra tu camino independiente 💡</p>
+    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_t24tpvcu.json" background="transparent" speed="1" style="width: 300px; height: 300px; margin: 2rem auto 0;" loop autoplay></lottie-player>
+  </section>
+
+  <section id="categorias" class="max-w-6xl mx-auto mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow p-6 hover:shadow-lg transition">
+      <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_yzvhlv8n.json" background="transparent" speed="1" style="width:100%; height:200px;" loop autoplay></lottie-player>
+      <h3 class="text-xl font-bold text-pink-600 dark:text-pink-400 mt-3">Diseño Gráfico</h3>
+      <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm">Transforma ideas en imágenes. Aprende sobre branding, logotipos y diseño visual para empresas y marcas personales.</p>
+    </div>
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow p-6 hover:shadow-lg transition">
+      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_kxsd2ytq.json" background="transparent" speed="1" style="width:100%; height:200px;" loop autoplay></lottie-player>
+      <h3 class="text-xl font-bold text-purple-600 dark:text-purple-400 mt-3">Redacción y Copywriting</h3>
+      <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm">Conquista con palabras. Aprende a escribir textos que venden, atraen y conectan con audiencias digitales.</p>
+    </div>
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow p-6 hover:shadow-lg transition">
+      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_jtbfg2nb.json" background="transparent" speed="1" style="width:100%; height:200px;" loop autoplay></lottie-player>
+      <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400 mt-3">Marketing Digital</h3>
+      <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm">Aprende a usar redes sociales, anuncios y estrategias para posicionar marcas y atraer clientes.</p>
+    </div>
+  </section>
+
+  <section id="diferencias" class="max-w-5xl mx-auto mt-24 px-6">
+    <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-100 text-center">Diferencias entre tipos de negocios freelance</h2>
+    <div class="mt-8 bg-white dark:bg-gray-800 rounded-2xl shadow overflow-hidden">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-purple-100 dark:bg-purple-900/40 text-gray-700 dark:text-gray-200">
+          <tr>
+            <th class="py-3 px-4">Tipo de Negocio</th>
+            <th class="py-3 px-4">Habilidades Principales</th>
+            <th class="py-3 px-4">Herramientas Comunes</th>
+            <th class="py-3 px-4">Nivel de Demanda</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-gray-200 dark:border-gray-700">
+            <td class="py-3 px-4">Diseño Gráfico</td>
+            <td class="py-3 px-4">Creatividad, branding, composición</td>
+            <td class="py-3 px-4">Canva, Figma, Adobe Illustrator</td>
+            <td class="py-3 px-4 text-green-600 dark:text-green-400 font-medium">Alta</td>
+          </tr>
+          <tr class="border-t border-gray-200 dark:border-gray-700">
+            <td class="py-3 px-4">Copywriting</td>
+            <td class="py-3 px-4">Comunicación, storytelling, SEO</td>
+            <td class="py-3 px-4">Google Docs, Notion</td>
+            <td class="py-3 px-4 text-yellow-600 dark:text-yellow-400 font-medium">Media</td>
+          </tr>
+          <tr class="border-t border-gray-200 dark:border-gray-700">
+            <td class="py-3 px-4">Marketing Digital</td>
+            <td class="py-3 px-4">Estrategia, análisis, redes sociales</td>
+            <td class="py-3 px-4">Meta Ads, Google Analytics</td>
+            <td class="py-3 px-4 text-green-600 dark:text-green-400 font-medium">Alta</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="contacto" class="max-w-4xl mx-auto mt-20 mb-16 px-6 text-center">
+    <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-100">Contáctanos</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-400">¿Tienes una idea o quieres compartir tu experiencia freelance? Escríbenos o síguenos en redes.</p>
+    <div class="mt-6 flex justify-center gap-6">
+      <a href="https://www.instagram.com" target="_blank" class="text-pink-600 dark:text-pink-400 hover:underline">Instagram</a>
+      <a href="https://www.facebook.com" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Facebook</a>
+      <a href="https://wa.me/" target="_blank" class="text-green-600 dark:text-green-400 hover:underline">WhatsApp</a>
+    </div>
+  </section>
+
+  <footer class="bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 py-6 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto text-center text-gray-700 dark:text-gray-300">
+      <p>© 2025 freelance.hn — Inspirando negocios independientes en Honduras 🇭🇳</p>
+    </div>
+  </footer>
+
+  <script>
+    const icon = document.getElementById('theme-icon');
+    function updateIcon() {
+      icon.textContent = document.documentElement.classList.contains('dark') ? '🌞' : '🌙';
+    }
+    updateIcon();
+    document.querySelector('button[onclick="toggleTheme()"]').addEventListener('click', () => {
+      setTimeout(updateIcon, 100);
+    });
+  </script>
+
+</body>
+</html>
